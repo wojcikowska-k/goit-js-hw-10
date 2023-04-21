@@ -52,7 +52,7 @@ function renderList(countries) {
 
 function showCountryInfo(countries) {
   const markup = countries.map(country => {
-    return `<li>
+    return `
           <p class='name'><img class='flag' src='${country.flags.svg}' />
             <b> ${country.name.official}</b></p>
             <p><b>Capital:</b> ${country.capital}</p>
@@ -60,7 +60,7 @@ function showCountryInfo(countries) {
             <p><b>Languages:</b> ${Object.values(country.languages).join(
               ', '
             )}</p>
-            </li>`;
+            `;
   });
   countryInfo.innerHTML = markup;
 }
